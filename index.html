@@ -1,146 +1,225 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nada Music Card</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<title>Nada Music Profile</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <div class="background">
 
-    <span class="spark s1"></span>
-    <span class="spark s2"></span>
-    <span class="spark s3"></span>
-    <span class="spark s4"></span>
-    <span class="spark s5"></span>
+<div class="blur blur1"></div>
+<div class="blur blur2"></div>
+<div class="blur blur3"></div>
 
 </div>
-
 
 <div class="card">
 
-    <div class="logo">
-        ✿
-        <h1>Nada</h1>
-    </div>
+<div class="top">
 
-    <div class="profile">
-
-        <div class="circle">
-
-            <img src="images/profile.jpg">
-
-        </div>
-
-    </div>
-
-
-    <div class="info">
-
-        <h2>ندى</h2>
-
-        <h3>Nada</h3>
-
-        <p>
-            A blend of music, art and starry dreams.
-        </p>
-
-    </div>
-
-
-    <div class="player">
-
-        <audio id="audio"></audio>
-
-        <div class="song-title">
-
-            <span id="musicName">
-                Starry Lullaby
-            </span>
-
-        </div>
-
-
-        <div class="controls">
-
-            <button id="prev">
-                <i class="fa-solid fa-backward"></i>
-            </button>
-
-            <button id="play">
-                <i class="fa-solid fa-play"></i>
-            </button>
-
-            <button id="next">
-                <i class="fa-solid fa-forward"></i>
-            </button>
-
-        </div>
-
-
-        <div class="progress">
-
-            <input
-            type="range"
-            value="0"
-            min="0"
-            max="100"
-            id="progress">
-
-        </div>
-
-    </div>
-
-
-
-    <div class="playlist">
-
-        <ul>
-
-            <li class="active">
-                <span>1. أغنية النجوم</span>
-                <span>03:45</span>
-            </li>
-
-            <li>
-                <span>2. أحلام بعيدة</span>
-                <span>04:12</span>
-            </li>
-
-            <li>
-                <span>3. لحن القمر</span>
-                <span>03:20</span>
-            </li>
-
-            <li>
-                <span>4. همس البحر</span>
-                <span>04:01</span>
-            </li>
-
-            <li>
-                <span>5. رقصة المطر</span>
-                <span>03:58</span>
-            </li>
-
-        </ul>
-
-    </div>
+<h1>Nada</h1>
 
 </div>
 
+<div class="avatar">
+
+<div class="avatar-border">
+
+<img src="images/profile.jpg">
+
+</div>
+
+</div>
+
+<div class="info">
+
+<h2>ندى</h2>
+
+<h3>Nada</h3>
+
+<p>
+
+A blend of music, art and starry dreams.
+
+</p>
+
+</div>
+
+<div class="music-player">
+
+<div class="cover">
+
+<img src="images/profile.jpg">
+
+</div>
+
+<div class="music-info">
+
+<h4 id="songName">
+
+Starry Night
+
+</h4>
+
+<span id="artist">
+
+Nada
+
+</span>
+
+</div>
+
+<div class="controls">
+
+<button id="prev">
+
+<i class="fa-solid fa-backward-step"></i>
+
+</button>
+
+<button id="play">
+
+<i class="fa-solid fa-play"></i>
+
+</button>
+
+<button id="next">
+
+<i class="fa-solid fa-forward-step"></i>
+
+</button>
+
+</div>
+
+<div class="progress">
+
+<input
+type="range"
+id="progress"
+value="0"
+min="0"
+max="100">
+
+</div>
+
+</div>
+
+<div class="playlist">
+
+<div class="title">
+
+Playlist
+
+</div>
+
+<ul>
+
+<li class="active">
+
+<span>01</span>
+
+<div>
+
+<h4>Starry Night</h4>
+
+<p>Nada</p>
+
+</div>
+
+<i class="fa-solid fa-music"></i>
+
+</li>
+
+<li>
+
+<span>02</span>
+
+<div>
+
+<h4>Dream</h4>
+
+<p>Nada</p>
+
+</div>
+
+<i class="fa-solid fa-music"></i>
+
+</li>
+
+<li>
+
+<span>03</span>
+
+<div>
+
+<h4>Golden Sky</h4>
+
+<p>Nada</p>
+
+</div>
+
+<i class="fa-solid fa-music"></i>
+
+</li>
+
+<li>
+
+<span>04</span>
+
+<div>
+
+<h4>Moon Light</h4>
+
+<p>Nada</p>
+
+</div>
+
+<i class="fa-solid fa-music"></i>
+
+</li>
+
+<li>
+
+<span>05</span>
+
+<div>
+
+<h4>Butterfly</h4>
+
+<p>Nada</p>
+
+</div>
+
+<i class="fa-solid fa-music"></i>
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
+
