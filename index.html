@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مشغل موسيقى ندى - Nada Music Player</title>
+    <title>Nada</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Tajawal:wght@400;500;700;800&family=Alexandria:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* التنسيقات الأساسية */
+        
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body, html {
             width: 100%; height: 100%; overflow-x: hidden;
             font-family: 'Tajawal', sans-serif; background-color: #e2d4e7;
         }
 
-        /* الحاوية الرئيسية والتدرج اللوني */
+       
         .main-container {
             min-height: 100vh; width: 100%; display: flex;
             justify-content: center; align-items: center;
@@ -25,9 +25,6 @@
             position: relative; padding: 20px; overflow: hidden;
         }
 
-        /* -------------------------------------- */
-        /* زخارف الخلفية وحركاتها (تم تعديلها لتكون واضحة) */
-        /* -------------------------------------- */
         .bg-decorations {
             position: absolute; width: 100%; height: 100%; top: 0; left: 0;
             pointer-events: none; z-index: 0;
@@ -38,14 +35,14 @@
             filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
         }
 
-        /* حركة الورود تتمايل */
+       
         @keyframes float-flower {
             0% { transform: translateY(0) rotate(0deg); }
             50% { transform: translateY(-20px) rotate(15deg); }
             100% { transform: translateY(5px) rotate(-5deg); }
         }
 
-        /* حركة الفراشات ترفرف وتطير */
+       
         @keyframes flutter-butterfly {
             0% { transform: translateY(0) translateX(0) scale(1) rotate(0deg); }
             30% { transform: translateY(-15px) translateX(15px) scale(1.1) rotate(10deg); }
@@ -57,7 +54,7 @@
         .butterfly { animation: flutter-butterfly 6s ease-in-out infinite alternate; font-size: 1.8rem; }
         .heart { animation: float-flower 4s ease-in-out infinite alternate; font-size: 1.2rem; opacity: 0.6; }
 
-        /* المواقع */
+       
         .fl-top-left { top: 12%; left: 15%; animation-delay: 0s; }
         .fl-top-right { top: 25%; right: 10%; animation-delay: 1s; font-size: 2rem;}
         .fl-mid-left { top: 50%; left: 8%; animation-delay: 2s; }
@@ -71,9 +68,7 @@
         .bf-left { top: 55%; left: 15%; transform: scaleX(-1); animation-delay: 0.3s; }
         .bf-right { top: 45%; right: 18%; animation-delay: 1.2s; font-size: 2.2rem; }
 
-        /* -------------------------------------- */
-        /* البطاقة الزجاجية الرئيسية */
-        /* -------------------------------------- */
+    
         .glass-card-wrapper { position: relative; z-index: 10; width: 100%; display: flex; justify-content: center; }
         
         .glass-card-backdrop {
@@ -117,7 +112,7 @@
         .meta-title-en { font-family: 'Cairo', sans-serif; font-weight: 600; font-size: 1.1rem; color: #40372f; margin-bottom: 8px; }
         .meta-bio { font-size: 0.9rem; color: #5c5249; line-height: 1.5; }
 
-        /* مشغل الصوت */
+       
         .audio-player-box {
             width: 100%; background: rgba(255, 255, 255, 0.6); border-radius: 18px;
             padding: 16px 20px; border: 1px solid rgba(255, 255, 255, 0.8);
@@ -144,7 +139,7 @@
             position: absolute; right: calc(100% - 6px); top: 50%; transform: translateY(-50%);
         }
 
-        /* قائمة الأغاني */
+      
         .playlist-wrapper { width: 100%; }
         .playlist-tracks-list { list-style: none; width: 100%; display: flex; flex-direction: column; gap: 5px; }
         .track-list-item {
@@ -163,15 +158,12 @@
 
         @keyframes pulse-icon { 0% { opacity: 0.4; transform: scale(0.9); } 100% { opacity: 1; transform: scale(1.1); } }
 
-        /* -------------------------------------- */
-        /* استعلامات الوسائط (Media Queries) للموبايل */
-        /* تجعل الكود فليكسابل بالكامل على الشاشات الصغيرة */
-        /* -------------------------------------- */
+   
         @media (max-width: 600px) {
             .glass-card { padding: 25px 20px; border-radius: 20px; }
             .glass-card-backdrop { border-radius: 24px; top: -5px; left: -5px; right: -5px; bottom: -5px; }
             .brand-title-ar { font-size: 1.6rem; }
-            .gold-glowing-ring { width: 110px; height: 110px; } /* تصغير حجم الصورة */
+            .gold-glowing-ring { width: 110px; height: 110px; } 
             .meta-title-ar { font-size: 1.2rem; }
             .meta-bio { font-size: 0.85rem; }
             .audio-player-box { padding: 12px 15px; }
@@ -222,7 +214,7 @@
 
                 <div class="user-meta">
                     <h3 class="meta-title-ar">نَدَى</h3>
-                    <h4 class="meta-title-en">Nada</h4>
+                    <h4 class="meta-title-en">N̥̊ḁ̊d̥̊ḁ̊ḁ̊</h4>
                     <p class="meta-bio">A blend of music, art, and starry dreams.</p>
                 </div>
 
