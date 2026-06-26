@@ -269,7 +269,7 @@
         const currentTimeEl = document.getElementById('currentTime');
         const totalDurationEl = document.getElementById('totalDuration');
 
-        // بناء قائمة الأغاني في HTML ديناميكياً
+
         function buildPlaylist() {
             playlistContainer.innerHTML = '';
             tracks.forEach((track, index) => {
@@ -290,14 +290,14 @@
             });
         }
 
-        // تحميل وتشغيل أغنية معينة
+
         function loadAndPlayTrack(index) {
             currentTrackIndex = index;
             const track = tracks[index];
             audio.src = track.src;
             titleDisplay.innerText = `${track.title} | ${track.artist}`;
             
-            buildPlaylist(); // لتحديث العنصر النشط في القائمة
+            buildPlaylist();
             playAudio();
         }
 
@@ -311,36 +311,35 @@
             playIcon.className = 'fas fa-play';
         }
 
-        // تفاعل زر التشغيل والإيقاف
+
         playBtn.addEventListener('click', () => {
             if (audio.src === "") { loadAndPlayTrack(0); } 
             else if (audio.paused) { playAudio(); } 
             else { pauseAudio(); }
         });
 
-        // زر التالي
+
         nextBtn.addEventListener('click', () => {
             let nextIndex = currentTrackIndex + 1;
             if (nextIndex >= tracks.length) nextIndex = 0;
             loadAndPlayTrack(nextIndex);
         });
 
-        // زر السابق
+
         prevBtn.addEventListener('click', () => {
             let prevIndex = currentTrackIndex - 1;
             if (prevIndex < 0) prevIndex = tracks.length - 1;
             loadAndPlayTrack(prevIndex);
         });
 
-        // تحديث شريط التقدم والوقت
+
         audio.addEventListener('timeupdate', () => {
             if (audio.duration) {
                 const progressPercent = (audio.currentTime / audio.duration) * 100;
                 progressBarFill.style.width = `${progressPercent}%`;
-                // تحريك النقطة مع الشريط المعكوس لأن الاتجاه RTL
+
                 progressThumb.style.right = `calc(${progressPercent}% - 6px)`;
 
-                // تنسيق الوقت (دقائق:ثواني)
                 let currentMins = Math.floor(audio.currentTime / 60);
                 let currentSecs = Math.floor(audio.currentTime % 60);
                 if (currentSecs < 10) currentSecs = `0${currentSecs}`;
@@ -353,24 +352,22 @@
             }
         });
 
-        // الضغط على شريط التقدم لتقديم/تأخير الأغنية
+
         progressBarBg.addEventListener('click', (e) => {
             const width = progressBarBg.clientWidth;
-            const clickX = e.offsetX; // المسافة من اليسار
-            // لأن الصفحة RTL والمحاذاة معكوسة، نحتاج لحساب النسبة بشكل صحيح
+            const clickX = e.offsetX;
+
             const duration = audio.duration;
             audio.currentTime = ((width - clickX) / width) * duration;
         });
 
-        // عند انتهاء الأغنية، شغل التي تليها تلقائياً
         audio.addEventListener('ended', () => {
             nextBtn.click();
         });
 
-        // التحميل الأولي للمشهد
         window.addEventListener('DOMContentLoaded', () => {
             buildPlaylist();
-            // تجهيز بيانات أول أغنية بدون تشغيل تلقائي
+
             const track = tracks[0];
             audio.src = track.src;
             titleDisplay.innerText = `${track.title} | ${track.artist}`;
