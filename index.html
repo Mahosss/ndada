@@ -16,7 +16,233 @@
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-<link rel="stylesheet" href="style.css">
+<style>
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background:linear-gradient(135deg,#f8e7c8,#d8b77d,#f4d9aa);
+    position:relative;
+}
+
+/* ===========================
+   BACKGROUND
+=========================== */
+
+.background{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.blur{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.45;
+}
+
+.blur1{
+    width:350px;
+    height:350px;
+    background:#ffd56a;
+    top:-120px;
+    left:-80px;
+}
+
+.blur2{
+    width:300px;
+    height:300px;
+    background:#ffffff;
+    bottom:-100px;
+    right:-80px;
+}
+
+.blur3{
+    width:280px;
+    height:280px;
+    background:#ffefc7;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.card{
+
+    width:420px;
+    height:760px;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.4);
+
+    border-radius:35px;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.25),
+    inset 0 0 30px rgba(255,255,255,.3);
+
+    padding:35px;
+
+    position:relative;
+
+}
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+padding:2px;
+
+border-radius:35px;
+
+background:linear-gradient(45deg,#fff8d4,#f0ca74,#ffffff,#c89c39);
+
+-webkit-mask:
+linear-gradient(#000 0 0) content-box,
+linear-gradient(#000 0 0);
+
+-webkit-mask-composite:xor;
+
+mask-composite:exclude;
+
+}
+
+.top{
+
+text-align:center;
+
+margin-bottom:25px;
+
+}
+
+.top h1{
+
+font-size:38px;
+
+font-weight:700;
+
+color:#7a5516;
+
+letter-spacing:2px;
+
+}
+
+/* ===========================
+   AVATAR
+=========================== */
+
+.avatar{
+
+display:flex;
+
+justify-content:center;
+
+margin-bottom:25px;
+
+}
+
+.avatar-border{
+
+width:190px;
+
+height:190px;
+
+padding:8px;
+
+border-radius:50%;
+
+background:linear-gradient(145deg,#fff7d6,#d8ab4d,#fffef5);
+
+box-shadow:
+
+0 15px 35px rgba(0,0,0,.18),
+
+0 0 35px rgba(255,221,120,.55);
+
+}
+
+.avatar-border img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+border-radius:50%;
+
+border:5px solid white;
+
+}
+
+/* ===========================
+   INFO
+=========================== */
+
+.info{
+
+text-align:center;
+
+margin-bottom:30px;
+
+}
+
+.info h2{
+
+font-size:32px;
+
+color:#6f4b13;
+
+margin-bottom:5px;
+
+}
+
+.info h3{
+
+font-size:18px;
+
+color:#967037;
+
+margin-bottom:12px;
+
+}
+
+.info p{
+
+font-size:14px;
+
+line-height:1.7;
+
+color:#555;
+
+}
+<style>
+
 
 </head>
 
